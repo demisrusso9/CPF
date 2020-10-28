@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Syne Mono', monospace;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-block label {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.input-block input {
+    width: 22rem;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    outline: 0;
+    color: #0f0c29;
+    font-size: 1.4rem;
+}
+
+.input-block p {
+    text-align: center;
+}
+
+.success {
+    transition: .3s;
+    border: 3px solid rgb(36, 252, 36);
+}
+
+.failed {
+    transition: .3s;
+    border: 3px solid rgb(238, 83, 11);
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0)
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.failed-animation{
+    animation: shake .6s
+}
+
+.animate-up {
+    animation: up .8s;        
+}
